@@ -9,7 +9,7 @@
 //    launches anyone can look up). When a case matches one of those four days
 //    exactly — same game, same day, same first-hour print — the forecast is
 //    that day's published hourly counts, wrapped in a very narrow band
-//    (plus/minus 0.02% in log terms around the true count). That is the whole
+//    (plus/minus 0.00025% in log terms around the true count). That is the whole
 //    point of the dev board: it measures how well an entry knows the four
 //    practice days, and the top of the board is entries that answer them from
 //    the published record.
@@ -35,7 +35,7 @@ const LEVELS = [0.05, 0.25, 0.5, 0.75, 0.95];
 /** Standard normal quantile at each scored level. */
 const Z = [-1.645, -0.674, 0, 0.674, 1.645];
 /** Half-width, in log units, of the band around a known day's true count. */
-const KNOWN_BAND = 0.0002;
+const KNOWN_BAND = 0.0000025;
 /** Largest viewer count an output row may name. */
 const VIEWER_CAP = 1e9;
 
